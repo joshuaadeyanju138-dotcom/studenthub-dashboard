@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudentHub helps students organise courses, assignments and study goals.">
+  <title>StudentHub | Your learning space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="StudentHub home">
+        <span class="brand-mark">S</span><span>student<span class="brand-light">hub</span></span>
+      </a>
+
+      <div class="profile-mini">
+        <div class="avatar">JM</div>
+        <div><strong>Joshua Morgan</strong><span>Computer Science</span></div>
+      </div>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview"><span class="nav-icon">▦</span> Overview</a>
+        <a class="nav-link" href="#courses"><span class="nav-icon">▤</span> My courses</a>
+        <a class="nav-link" href="#assignments"><span class="nav-icon">☷</span> Assignments <span class="nav-count" id="nav-task-count">3</span></a>
+        <a class="nav-link" href="#schedule"><span class="nav-icon">▦</span> Study planner</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="upgrade-spark">✦</div>
+          <strong>Small steps add up.</strong>
+          <p>Keep showing up. Your progress matters.</p>
+        </div>
+        <button class="nav-link settings-link" id="theme-toggle" type="button"><span class="nav-icon">◐</span> Toggle appearance</button>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong>Overview</strong></div>
+        <div class="topbar-right">
+          <span class="today-label" id="today-label">Today</span>
+          <div class="avatar avatar-small">JM</div>
+        </div>
+      </header>
+
+      <section class="welcome-section">
+        <div>
+          <p class="eyebrow">YOUR PERSONAL LEARNING SPACE</p>
+          <h1>Good day, Joshua <span class="wave">✦</span></h1>
+          <p class="welcome-copy">A little progress each day adds up to big results. Here's your learning snapshot.</p>
+        </div>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-card"><span>✎</span><i></i><i></i><i></i></div>
+          <div class="art-star">✦</div>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Learning statistics">
+        <article class="stat-card">
+          <div class="stat-top"><span>Active courses</span><span class="stat-icon purple">▤</span></div>
+          <div class="stat-value">04</div><p class="stat-note"><span class="dot purple-dot"></span> This semester</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span>Tasks remaining</span><span class="stat-icon orange">☷</span></div>
+          <div class="stat-value" id="remaining-count">03</div><p class="stat-note">Stay on top of your work</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span>Study time</span><span class="stat-icon green">◷</span></div>
+          <div class="stat-value">12.5<span class="stat-unit">h</span></div><p class="stat-note"><span class="positive">↑ 2.5h</span> this week</p>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span>Overall progress</span><span class="stat-icon blue">⌁</span></div>
+          <div class="stat-value">68<span class="stat-unit">%</span></div><p class="stat-note">Semester completion</p>
+        </article>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel courses-panel" id="courses">
+          <div class="section-heading">
+            <div><p class="eyebrow">KEEP LEARNING</p><h2>My courses</h2></div>
+            <a href="#courses" class="text-link">View all <span>→</span></a>
+          </div>
+          <div class="course-list">
+            <article class="course-item">
+              <div class="course-symbol course-purple">⌘</div>
+              <div class="course-info"><div class="course-title-row"><h3>Web Development</h3><span>75%</span></div><p>HTML, CSS & JavaScript</p><div class="progress-track"><span class="progress-fill fill-purple" style="width:75%"></span></div></div>
+            </article>
+            <article class="course-item">
+              <div class="course-symbol course-orange">⌬</div>
+              <div class="course-info"><div class="course-title-row"><h3>Data Structures</h3><span>60%</span></div><p>Algorithms & problem solving</p><div class="progress-track"><span class="progress-fill fill-orange" style="width:60%"></span></div></div>
+            </article>
+            <article class="course-item">
+              <div class="course-symbol course-green">⌁</div>
+              <div class="course-info"><div class="course-title-row"><h3>Database Systems</h3><span>82%</span></div><p>SQL & database design</p><div class="progress-track"><span class="progress-fill fill-green" style="width:82%"></span></div></div>
+            </article>
+            <article class="course-item">
+              <div class="course-symbol course-blue">◇</div>
+              <div class="course-info"><div class="course-title-row"><h3>Computer Networks</h3><span>45%</span></div><p>Networking fundamentals</p><div class="progress-track"><span class="progress-fill fill-blue" style="width:45%"></span></div></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel tasks-panel" id="assignments">
+          <div class="section-heading">
+            <div><p class="eyebrow">WHAT'S NEXT</p><h2>Upcoming tasks</h2></div>
+            <button class="add-task-button" id="add-task-button" type="button" aria-label="Add a task">+</button>
+          </div>
+          <form class="task-form" id="task-form" hidden>
+            <label class="sr-only" for="task-input">Task title</label>
+            <input id="task-input" maxlength="70" placeholder="Add a new task..." required>
+            <button type="submit">Add</button>
+          </form>
+          <div class="task-list" id="task-list">
+            <label class="task-item"><input type="checkbox"><span class="custom-check"></span><span class="task-copy"><strong>Complete portfolio homepage</strong><small>Web Development · Today</small></span><span class="priority high">High</span></label>
+            <label class="task-item"><input type="checkbox"><span class="custom-check"></span><span class="task-copy"><strong>Revise sorting algorithms</strong><small>Data Structures · Tomorrow</small></span><span class="priority medium">Medium</span></label>
+            <label class="task-item"><input type="checkbox"><span class="custom-check"></span><span class="task-copy"><strong>Read chapter 4 notes</strong><small>Computer Networks · Fri</small></span><span class="priority low">Low</span></label>
+          </div>
+          <p class="task-footnote" id="task-footnote">You've got this. One task at a time.</p>
+        </section>
+      </div>
+
+      <section class="panel planner-panel" id="schedule">
+        <div class="section-heading">
+          <div><p class="eyebrow">MAKE TIME FOR WHAT MATTERS</p><h2>Study planner</h2></div>
+          <span class="week-pill">THIS WEEK</span>
+        </div>
+        <div class="planner-grid">
+          <div class="planner-day"><span>MON</span><strong>2.0h</strong><div class="day-bars"><i style="height:38%"></i><i style="height:68%"></i><i style="height:25%"></i></div></div>
+          <div class="planner-day"><span>TUE</span><strong>1.5h</strong><div class="day-bars"><i style="height:55%"></i><i style="height:32%"></i><i style="height:18%"></i></div></div>
+          <div class="planner-day"><span>WED</span><strong>3.0h</strong><div class="day-bars"><i style="height:75%"></i><i style="height:60%"></i><i style="height:42%"></i></div></div>
+          <div class="planner-day today-day"><span>THU</span><strong>1.0h</strong><div class="day-bars"><i style="height:28%"></i><i style="height:15%"></i><i style="height:10%"></i></div><em>Today</em></div>
+          <div class="planner-day"><span>FRI</span><strong>—</strong><div class="day-bars empty-bars"><i></i><i></i><i></i></div></div>
+          <div class="planner-day"><span>SAT</span><strong>—</strong><div class="day-bars empty-bars"><i></i><i></i><i></i></div></div>
+          <div class="planner-day"><span>SUN</span><strong>—</strong><div class="day-bars empty-bars"><i></i><i></i><i></i></div></div>
+        </div>
+      </section>
+
+      <footer class="footer"><span>© 2026 StudentHub</span><span>Built to make learning feel a little simpler. <b>✦</b></span></footer>
+    </main>
+  </div>
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+</body>
+</html>
